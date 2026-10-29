@@ -1,0 +1,14 @@
+/* VARIABLES DE MARCA — se cambian acá y se actualizan las 3 landings */
+:root {
+  --color-bg: #F1F1F4;
+  --color-primary: #B47F31;   /* dorado: botones y detalles */
+  --color-secondary: #686A39; /* verde oliva: secciones y fondos */
+  --color-accent: #686A39;    /* pendiente: confirmar si es otro color */
+  --color-dark: #302D2D;      /* texto y fondos oscuros */
+
+  --font-body: "Poppins", system-ui, sans-serif;
+  --font-display: "Ablation", "Poppins", sans-serif; /* solo adornos */
+
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --container: 1200px;
+}

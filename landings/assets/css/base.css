@@ -1,0 +1,87 @@
+/* BASE COMPARTIDA: reset, tipografía, botones, layout y estados de animación */
+@import url("tokens.css");
+
+/* Cuando tengas el archivo de Ablation, ponelo en branding/tipografias y descomentá:
+@font-face {
+  font-family: "Ablation";
+  src: url("../fonts/Ablation.woff2") format("woff2");
+  font-weight: 400; font-display: swap;
+}
+*/
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--color-dark);
+  background: var(--color-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* Lenis (scroll suave) necesita estas reglas */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+.container { width: min(var(--container), 100% - 3rem); margin-inline: auto; }
+.section { padding-block: clamp(4.5rem, 10vw, 8rem); }
+.section--dark { background: var(--color-dark); color: var(--color-bg); }
+.section--olive { background: var(--color-secondary); color: var(--color-bg); }
+
+h1, h2, h3 { font-weight: 600; line-height: 1.15; letter-spacing: -.01em; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+h3 { font-size: 1.25rem; }
+
+.eyebrow {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .28em;
+  font-size: .8rem;
+  color: var(--color-primary);
+  display: inline-flex; align-items: center; gap: .9rem;
+  margin-bottom: 1.2rem;
+}
+.eyebrow::before { content: ""; width: 2.5rem; height: 1px; background: currentColor; }
+.lead { font-size: 1.1rem; max-width: 56ch; opacity: .85; }
+
+/* Botones */
+.btn {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: 1rem 2rem; border-radius: 999px;
+  font-weight: 500; font-size: .95rem; letter-spacing: .02em;
+  border: 1px solid transparent; cursor: pointer;
+  transition: transform .4s var(--ease-out), background .3s, color .3s, border-color .3s;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--primary:hover { background: #9c6c28; }
+.btn--ghost { border-color: currentColor; }
+.btn--ghost:hover { background: var(--color-bg); color: var(--color-dark); }
+
+/* Foto placeholder: reemplazar por <img> cuando tengamos las del Instagram */
+.ph {
+  position: relative; overflow: hidden; border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(180,127,49,.35), rgba(104,106,57,.55)),
+    var(--color-dark);
+  display: grid; place-items: center;
+  color: rgba(241,241,244,.7); font-size: .8rem; letter-spacing: .15em; text-transform: uppercase;
+  text-align: center; padding: 1rem;
+}
+.media img, .ph > img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ESTADOS INICIALES DE ANIMACIÓN: GSAP los lleva al estado final.
+   Solo se ocultan si JS está activo (clase .js en <html>), así sin JS la página se ve igual. */
+.js [data-reveal] { opacity: 0; transform: translateY(40px); }
+.js [data-reveal="left"] { transform: translateX(-50px); }
+.js [data-reveal="right"] { transform: translateX(50px); }
+.js [data-reveal="fade"] { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] { opacity: 1; transform: none; }
+  * { animation: none !important; transition: none !important; }
+}
