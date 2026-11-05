@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "outputDirectory": "landings",
+  "rewrites": [
+    { "source": "/", "destination": "/institucional/index.html" }
+  ]
+}
