@@ -80,8 +80,9 @@ h3 { font-size: 1.25rem; }
 .js [data-reveal="left"] { transform: translateX(-50px); }
 .js [data-reveal="right"] { transform: translateX(50px); }
 .js [data-reveal="fade"] { transform: none; }
+.js [data-stagger] > * { opacity: 0; transform: translateY(40px); }
 
 @media (prefers-reduced-motion: reduce) {
-  .js [data-reveal] { opacity: 1; transform: none; }
+  .js [data-reveal], .js [data-stagger] > * { opacity: 1; transform: none; }
   * { animation: none !important; transition: none !important; }
 }

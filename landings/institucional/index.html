@@ -3,173 +3,224 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quinchos Santa Fé | Quinchos a medida</title>
-  <meta name="description" content="Diseñamos y construimos quinchos a medida en Santa Fé. Calidad, cumplimiento y garantía.">
+  <title>Quinchos Santa Fe | Quinchos de paja en todo el país</title>
+  <meta name="description" content="Construimos quinchos de paja en todo el país. Tres líneas de construcción, quinchos estándar y grandes proyectos a medida, con 2 años de garantía.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
   <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/institucional/styles.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
-<!-- TEXTOS DE EJEMPLO: se reemplazan cuando el cliente envíe su información -->
 <header class="site-header">
   <div class="container">
-    <a href="#" class="logo" aria-label="Quinchos Santa Fé"><img src="/assets/img/logo-claro.png" alt="Quinchos Santa Fé" width="623" height="354"></a>
+    <a href="/" class="logo" aria-label="Quinchos Santa Fe"><img src="/assets/img/logo-claro.png" alt="Quinchos Santa Fe" width="623" height="354"></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
     <nav class="nav">
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#obras">Obras</a>
-      <a href="#contacto" class="btn btn--primary">Cotizar</a>
+      <a href="/minorista">Quinchos Estándar</a>
+      <a href="/mayorista">Grandes Proyectos</a>
+      <a href="#calidad">Calidad</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto" class="btn btn--primary" data-wa="Hola! Quiero pedir un presupuesto de un quincho.">Cotizar</a>
     </nav>
   </div>
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero__bg ph" aria-hidden="true"></div>
+    <div class="hero__art" data-draw aria-hidden="true">
+      <svg viewBox="0 0 760 440" fill="none" stroke="#B47F31" stroke-width="1.4">
+        <path d="M6 400 L380 28 L754 400"/>
+        <path d="M70 400 L380 92 L690 400"/>
+        <path d="M134 400 L380 156 L626 400"/>
+        <path d="M198 400 L380 220 L562 400"/>
+        <path d="M262 400 L380 283 L498 400"/>
+      </svg>
+    </div>
     <div class="container">
-      <span class="eyebrow" data-hero>Construcción de quinchos · Santa Fé</span>
-      <h1 data-hero>El lugar donde <em>se juntan</em> los que más querés.</h1>
-      <p class="lead" data-hero>Diseñamos y construimos quinchos a medida, con materiales de calidad y un equipo propio que cumple los plazos.</p>
+      <span class="eyebrow" data-hero>Quinchos de paja · Todo el país</span>
+      <h1 data-hero>Construimos el lugar donde <em>se juntan</em> los que más querés.</h1>
+      <p class="lead" data-hero>Espacios para disfrutar, con materiales seleccionados, experiencia y compromiso en cada obra. Desde Santa Fe, a toda la Argentina.</p>
       <div class="hero__cta" data-hero>
-        <a href="#contacto" class="btn btn--primary">Pedir presupuesto</a>
-        <a href="#obras" class="btn btn--ghost">Ver obras</a>
+        <a href="#contacto" class="btn btn--primary" data-wa="Hola! Quiero pedir un presupuesto de un quincho.">Pedir presupuesto</a>
+        <a href="#caminos" class="btn btn--ghost">Ver opciones</a>
       </div>
+      <ul class="hero__badges" data-hero>
+        <li>2 años de garantía</li>
+        <li>3 líneas de construcción</li>
+        <li>Cubierta de paja peinada</li>
+      </ul>
     </div>
     <span class="scroll-hint"></span>
   </section>
 
-  <section class="section">
-    <div class="container stats">
-      <div class="stat" data-reveal><strong><span data-count="10">0</span>+</strong><em class="stat__label">Años de experiencia</em></div>
-      <div class="stat" data-reveal data-delay=".1"><strong><span data-count="250">0</span>+</strong><em class="stat__label">Quinchos construidos</em></div>
-      <div class="stat" data-reveal data-delay=".2"><strong><span data-count="100">0</span>%</strong><em class="stat__label">Equipo propio</em></div>
-      <div class="stat" data-reveal data-delay=".3"><strong><span data-count="5">0</span></strong><em class="stat__label">Años de garantía</em></div>
+  <!-- CINTA -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Quinchos de paja</span><span>Todo el territorio argentino</span><span>2 años de garantía</span><span>Eucalipto · Quebracho · Palmera</span><span>Obras residenciales y de gran escala</span>
+      <span>Quinchos de paja</span><span>Todo el territorio argentino</span><span>2 años de garantía</span><span>Eucalipto · Quebracho · Palmera</span><span>Obras residenciales y de gran escala</span>
     </div>
-  </section>
+  </div>
 
-  <section class="section" id="servicios" style="padding-top:0">
+  <!-- ELEGÍ TU CAMINO -->
+  <section class="section" id="caminos">
     <div class="container">
       <div class="section-head" data-reveal>
-        <span class="eyebrow">Qué hacemos</span>
-        <h2>Una solución para cada necesidad.</h2>
-        <p class="lead">Ya sea tu casa, tu emprendimiento o tu negocio, tenemos el servicio indicado.</p>
+        <span class="eyebrow">Qué construimos</span>
+        <h2>Elegí el tipo de proyecto que necesitás.</h2>
+        <p class="lead">Separamos nuestro trabajo según lo que cada cliente necesita, para darte una respuesta clara desde el primer mensaje.</p>
       </div>
-      <div class="cards">
-        <article class="card" data-reveal>
-          <div class="ph">FOTO · quincho a medida</div>
-          <div class="card__body">
-            <h3>Quinchos a medida</h3>
-            <p>Proyecto, diseño y construcción llave en mano para tu hogar. Vos elegís el estilo, nosotros nos ocupamos de todo.</p>
-            <a href="/minorista" class="card__link">Conocer más</a>
-          </div>
-        </article>
-        <article class="card" data-reveal data-delay=".12">
-          <div class="ph">FOTO · producción en serie</div>
-          <div class="card__body">
-            <h3>Venta mayorista</h3>
-            <p>Para constructoras, inmobiliarias y revendedores. Precios por volumen, plazos de entrega acordados y atención dedicada.</p>
-            <a href="/mayorista" class="card__link">Conocer más</a>
-          </div>
-        </article>
-        <article class="card" data-reveal data-delay=".24">
-          <div class="ph">FOTO · terminaciones</div>
-          <div class="card__body">
-            <h3>Reformas y ampliaciones</h3>
-            <p>Renovamos o ampliamos tu quincho actual: techos, parrillas, revestimientos y mucho más.</p>
-            <a href="#contacto" class="card__link">Consultar</a>
-          </div>
-        </article>
+      <div class="paths" data-stagger>
+        <a href="/minorista" class="path">
+          <small>Catálogo definido</small>
+          <h3>Quinchos Estándar</h3>
+          <p>Trabajos del catálogo, sin diseño previo. Se adaptan a cualquier terreno si el espacio lo permite y se presupuestan en el momento.</p>
+          <ul><li>6 × 4 m</li><li>8 × 4 m</li><li>10 × 5 m</li></ul>
+          <span class="path__link">Ver quinchos estándar</span>
+        </a>
+        <a href="/mayorista" class="path path--olive">
+          <small>Diseños a medida</small>
+          <h3>Grandes Proyectos</h3>
+          <p>Obras que requieren diseño y planeamiento: ganadería, salones de eventos, turismo y complejos, o varios trabajos en un mismo predio.</p>
+          <ul><li>Eventos</li><li>Turismo</li><li>Ganadería</li></ul>
+          <span class="path__link">Ver grandes proyectos</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="section section--dark" id="nosotros">
+  <!-- NÚMEROS -->
+  <section class="section has-pattern has-pattern--soft" style="padding-top:0">
+    <div class="container stats" data-stagger>
+      <div class="stat"><strong><span data-count="2">0</span></strong><em class="stat__label">Años de garantía</em></div>
+      <div class="stat"><strong><span data-count="3">0</span></strong><em class="stat__label">Líneas de construcción</em></div>
+      <div class="stat"><strong><span data-count="60">0</span>+</strong><em class="stat__label">Años de vida útil en postes de quebracho*</em></div>
+      <div class="stat"><strong class="stat__text">Todo el país</strong><em class="stat__label">Instalaciones en Argentina</em></div>
+    </div>
+  </section>
+
+  <!-- CALIDAD -->
+  <section class="section section--dark roof has-pattern has-pattern--soft" id="calidad">
+    <img class="watermark" src="/assets/img/isotipo-rombo.png" alt="" style="right:-6%;top:12%;width:min(520px,60vw)" data-parallax="0.08">
     <div class="container split">
-      <div class="ph" data-reveal="left">FOTO · equipo trabajando</div>
+      <div class="ph" data-reveal="left">FOTO · cubierta de paja</div>
       <div data-reveal="right">
-        <span class="eyebrow">Por qué elegirnos</span>
+        <span class="eyebrow">Calidad constructiva</span>
         <h2>Construimos como si fuera para nosotros.</h2>
-        <p class="lead" style="margin-top:1.2rem">Somos un equipo de Santa Fé que trabaja con compromiso, transparencia y orgullo por cada obra terminada.</p>
+        <p class="lead" style="margin-top:1.2rem">Sea cual sea la línea que elijas, todos nuestros quinchos comparten los mismos fundamentos de construcción.</p>
         <ul class="checks">
-          <li><b>Presupuesto claro.</b> Sin sorpresas: sabés qué incluye y cuánto cuesta desde el principio.</li>
-          <li><b>Cumplimos los plazos.</b> Fecha de entrega pactada y seguimiento de obra.</li>
-          <li><b>Materiales seleccionados.</b> Durabilidad y buenas terminaciones.</li>
-          <li><b>Garantía por escrito.</b> Respaldo después de entregar la obra.</li>
+          <li><b>Estructura superior</b> en madera de eucalipto seleccionado.</li>
+          <li><b>Cubierta de paja peinada,</b> en panes cuidadosamente colocados y fijados.</li>
+          <li><b>Resistencia climática:</b> protección frente a lluvias, sol y variaciones de temperatura.</li>
+          <li><b>Aislación térmica natural:</b> más fresco en verano y menos pérdida de calor en invierno.</li>
+          <li><b>Escurrimiento del agua</b> gracias a la superposición de los panes.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="section" id="proceso">
+  <!-- LÍNEAS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Tres líneas de construcción</span>
+        <h2>Cada una pensada para diferentes necesidades.</h2>
+      </div>
+      <div class="lines" data-stagger>
+        <article class="line-card">
+          <span class="tag">Económica</span><h3>Línea Tradicional</h3><span class="wood">Postes de palmera</span>
+          <p>Conserva la estética rústica y natural de los quinchos tradicionales con una menor inversión inicial. Su vida útil es más limitada.</p>
+          <div class="life"><span>Postes</span><b>8 años</b></div>
+        </article>
+        <article class="line-card">
+          <span class="tag">Intermedia</span><h3>Línea Clásica</h3><span class="wood">Eucalipto curado e impregnado</span>
+          <p>Excelente relación entre calidad, estética y costo, para quienes buscan una estructura más resistente y de mayor vida útil.</p>
+          <div class="life"><span>Postes</span><b>12–15 años</b></div>
+        </article>
+        <article class="line-card line-card--featured">
+          <span class="tag">Premium</span><h3>Línea Exclusiva</h3><span class="wood">Quebracho colorado y eucalipto blanqueado</span>
+          <p>Nuestra línea de mayor categoría: dureza, resistencia y longevidad, con una terminación estética más refinada.</p>
+          <div class="life"><span>Postes</span><b>+60 años</b></div>
+        </article>
+      </div>
+      <p class="fineprint">* Durabilidad estimada de los postes. La cubierta de paja tiene una vida útil aproximada de 10 años y puede renovarse conservando la estructura.</p>
+      <div class="faq-more"><a href="/minorista#lineas" class="btn btn--ghost" style="color:var(--color-dark)">Comparar las tres líneas</a></div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section section--dark roof has-pattern has-pattern--soft" id="proceso">
     <div class="container">
       <div class="section-head" data-reveal>
         <span class="eyebrow">Cómo trabajamos</span>
-        <h2>Un proceso simple, de la idea a la inauguración.</h2>
+        <h2>Un proceso simple, de tu mensaje a la inauguración.</h2>
       </div>
-      <div class="steps" style="color:var(--color-dark)">
-        <div class="step" data-reveal style="border-color:rgba(48,45,45,.25)"><h3>Consulta</h3><p>Nos contás qué necesitás y medimos el espacio.</p></div>
-        <div class="step" data-reveal data-delay=".1" style="border-color:rgba(48,45,45,.25)"><h3>Diseño y presupuesto</h3><p>Te presentamos el proyecto y un presupuesto detallado.</p></div>
-        <div class="step" data-reveal data-delay=".2" style="border-color:rgba(48,45,45,.25)"><h3>Construcción</h3><p>Ejecutamos la obra con seguimiento y avances.</p></div>
-        <div class="step" data-reveal data-delay=".3" style="border-color:rgba(48,45,45,.25)"><h3>Entrega y garantía</h3><p>Te entregamos el quincho listo para disfrutar.</p></div>
+      <div class="steps" data-stagger>
+        <div class="step"><h3>Consulta</h3><p>Escribinos por WhatsApp con tu localidad, las medidas aproximadas y la línea que te interesa.</p></div>
+        <div class="step"><h3>Presupuesto</h3><p>Te asesoramos y cotizamos. Sin anticipos para reservar la obra.</p></div>
+        <div class="step"><h3>Instalación</h3><p>Coordinamos fecha y requisitos del terreno. 50 % al comenzar la instalación.</p></div>
+        <div class="step"><h3>Entrega y garantía</h3><p>50 % al finalizar el trabajo, y 2 años de garantía por defectos de construcción.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section section--olive" id="obras">
+  <!-- OBRAS -->
+  <section class="section" id="obras">
     <div class="container">
       <div class="section-head" data-reveal>
-        <span class="eyebrow" style="color:#fff">Nuestras obras</span>
+        <span class="eyebrow">Nuestras obras</span>
         <h2>Resultados que hablan solos.</h2>
       </div>
-      <div class="gallery">
-        <div class="ph g1" data-reveal>OBRA 1</div>
-        <div class="ph g2" data-reveal data-delay=".1">OBRA 2</div>
-        <div class="ph g3" data-reveal>OBRA 3</div>
-        <div class="ph g4" data-reveal data-delay=".1">OBRA 4</div>
-        <div class="ph g5" data-reveal data-delay=".2">OBRA 5</div>
+      <div class="gallery" data-stagger>
+        <div class="ph g1">OBRA</div><div class="ph g2">OBRA</div>
+        <div class="ph g3">OBRA</div><div class="ph g4">OBRA</div><div class="ph g5">OBRA</div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- FAQ -->
+  <section class="section section--olive roof has-pattern has-pattern--soft" id="faq">
     <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Clientes</span>
-        <h2>Lo que dicen quienes ya disfrutan su quincho.</h2>
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Lo que todos nos preguntan.</h2>
       </div>
-      <div class="quotes">
-        <blockquote class="quote" data-reveal><p>“Cumplieron la fecha y el resultado superó lo que esperábamos. Hoy es el centro de todas nuestras reuniones.”</p><cite>Martín R.<span>Santa Fé Capital</span></cite></blockquote>
-        <blockquote class="quote" data-reveal data-delay=".12"><p>“Muy prolijos y claros con el presupuesto. Sin sorpresas de ningún tipo.”</p><cite>Laura G.<span>Rincón</span></cite></blockquote>
-        <blockquote class="quote" data-reveal data-delay=".24"><p>“Como constructora, trabajar con ellos en volumen nos ordenó los tiempos de obra.”</p><cite>Constructora L&amp;M<span>Cliente mayorista</span></cite></blockquote>
-      </div>
+      <div class="faq" data-faq="1,2,3,5,13,14"></div>
+      <div class="faq-more"><a href="/minorista#faq" class="btn btn--ghost">Ver todas las preguntas</a></div>
     </div>
   </section>
 
-  <section class="section section--dark cta" id="contacto">
+  <!-- CTA -->
+  <section class="section section--dark cta has-pattern" id="contacto">
+    <img class="watermark" src="/assets/img/isotipo-rombo.png" alt="">
     <div class="container">
       <span class="eyebrow">Hablemos</span>
-      <h2 data-reveal>¿Listo para construir tu quincho?</h2>
-      <p class="lead" data-reveal data-delay=".1">Escribinos por WhatsApp y te respondemos a la brevedad con una propuesta.</p>
-      <a class="btn btn--primary" data-reveal data-delay=".2" href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <h2 data-reveal>¿Tenés un proyecto en mente?</h2>
+      <p class="lead" data-reveal data-delay=".1">Construimos espacios para disfrutar. Contactanos y recibí asesoramiento personalizado.</p>
+      <a class="btn btn--primary" data-reveal data-delay=".2" href="#" data-wa="Hola! Tengo un proyecto y quiero pedir un presupuesto.">Solicitá tu presupuesto por WhatsApp</a>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <img class="footer-logo" src="/assets/img/logo-claro.png" alt="" width="623" height="354"><span>© 2026 Quinchos Santa Fé. Todos los derechos reservados.</span>
-    <span><a href="https://www.instagram.com/quinchos.stafe/" target="_blank" rel="noopener">Instagram @quinchos.stafe</a></span>
+    <div>
+      <img class="footer-logo" src="/assets/img/logo-claro.png" alt="Quinchos Santa Fe" width="623" height="354">
+      <p>Quinchos de paja en todo el territorio argentino, desde Santa Fe.</p>
+    </div>
+    <div><h4>Proyectos</h4><ul><li><a href="/minorista">Quinchos Estándar</a></li><li><a href="/mayorista">Grandes Proyectos</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li><a href="#" data-wa="Hola! Quiero hacer una consulta.">WhatsApp</a></li><li><a href="https://www.instagram.com/quinchos.stafe/" target="_blank" rel="noopener">Instagram @quinchos.stafe</a></li></ul></div>
+    <p class="legal">© 2026 Quinchos Santa Fe. Todos los derechos reservados.</p>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="/assets/js/faq.js"></script>
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
