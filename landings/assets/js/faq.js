@@ -31,6 +31,12 @@ const FAQS = {
     "<p>Ofrecemos diferentes modalidades de pago, que se informan al momento de la cotización. En las operaciones de contado, el esquema habitual contempla <b>50 % al comenzar la instalación y el 50 % restante al finalizar el trabajo</b>, sin necesidad de anticipos para reservar la obra.</p><p>Las condiciones específicas se detallan en cada presupuesto.</p>"],
   14: ["¿Cómo puedo solicitar un presupuesto?",
     "<p>Podés comunicarte directamente con nuestro equipo a través de WhatsApp. Para preparar una cotización necesitamos conocer la localidad de instalación, las medidas aproximadas del quincho y la línea constructiva de tu interés.</p><p>Nuestro equipo te asesorará para encontrar la alternativa más adecuada para tu proyecto.</p>"],
+  17: ["¿Cómo se desarrolla y planifica un proyecto a medida?",
+    "<p>Todo comienza con una consulta por WhatsApp, donde nos contás de qué se trata tu proyecto. Evaluamos las dimensiones, las características y las necesidades estructurales; elaboramos un presupuesto personalizado, planificamos la construcción y la ejecutamos con nuestro equipo, que se traslada con los materiales hasta tu predio.</p>"],
+  18: ["¿Qué medidas y modelos están disponibles?",
+    "<p>Tenemos tres modelos estándar: <b>6 × 4 metros (24 m²), 10 × 4 metros (40 m²) y 10 × 5 metros (50 m²)</b>. Cualquiera de ellos puede construirse con cualquiera de nuestras tres líneas: Tradicional, Clásica o Exclusiva. Si necesitás otro tamaño, consultanos.</p>"],
+  19: ["¿Cómo puedo consultar modelos y precios?",
+    "<p>Escribinos por WhatsApp con tu localidad, las medidas aproximadas y la línea constructiva que te interesa. Nuestro equipo te asesora, te informa los modelos disponibles y te prepara un presupuesto personalizado.</p>"],
   15: ["¿Se puede instalar en cualquier terreno?",
     "<p>Los quinchos estándar no requieren un diseño previo y pueden adaptarse a cualquier tipo de terreno <b>si el espacio lo permite</b>. Antes de iniciar la obra, nuestro equipo te informa los requisitos de preparación, la ubicación de los postes y la accesibilidad necesaria.</p>"],
 };

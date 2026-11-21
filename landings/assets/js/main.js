@@ -169,3 +169,13 @@ if (window.gsap && !reduce) {
 } else {
   document.querySelector(".site-header")?.classList.add("is-solid");
 }
+
+/* ---------- VIDEO DE PORTADA ----------
+   Si existe assets/video/portada.mp4, se muestra de fondo. En celular o con ahorro de datos
+   no se carga (queda el fondo de marca), para no gastar datos ni frenar la página. */
+const heroVideo = document.querySelector(".hero__video");
+if (heroVideo) {
+  const saveData = navigator.connection && navigator.connection.saveData;
+  if (reduce || saveData || window.matchMedia("(max-width: 768px)").matches) heroVideo.remove();
+  else heroVideo.addEventListener("playing", () => heroVideo.classList.add("is-playing"));
+}

@@ -31,7 +31,11 @@
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero hero--video">
+    <!-- VIDEO DE PORTADA (pendiente): subí el archivo a landings/assets/video/portada.mp4
+         (horizontal 1920x1080, sin audio, 10-15 s, menos de 8 MB) y quitá los comentarios de la línea de abajo:
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="/assets/video/portada.mp4" type="video/mp4"></video>
+    -->
     <div class="hero__art" data-draw aria-hidden="true">
       <svg viewBox="0 0 760 440" fill="none" stroke="#B47F31" stroke-width="1.4">
         <path d="M6 400 L380 28 L754 400"/><path d="M70 400 L380 92 L690 400"/><path d="M134 400 L380 156 L626 400"/><path d="M198 400 L380 220 L562 400"/><path d="M262 400 L380 283 L498 400"/>
@@ -43,8 +47,8 @@
       <p class="lead" data-hero>Diseñamos y construimos quinchos para hogares, establecimientos rurales, emprendimientos turísticos y grandes proyectos. Soluciones adaptadas a cada espacio y necesidad.</p>
       <p class="hero__quote" data-hero>El lugar donde se juntan los que más querés.</p>
       <div class="hero__cta" data-hero>
+        <a href="#caminos" class="btn btn--primary">Conocé nuestros quinchos</a>
         <a href="#" class="btn btn--wa" data-wa="Hola! Quiero consultar por un quincho. ¿Me pueden asesorar?" data-loc="portada">Consultar por WhatsApp</a>
-        <a href="#caminos" class="btn btn--ghost">Conocé nuestros quinchos</a>
       </div>
       <ul class="hero__badges" data-hero>
         <li>2 años de garantía</li>
@@ -83,7 +87,7 @@
           <h3>Quinchos para hogares</h3>
           <p>Modelos estándar para patios, jardines y espacios familiares. Sin diseño previo: se presupuestan en el momento.</p>
           <ul><li>6 × 4 m</li><li>10 × 4 m</li><li>10 × 5 m</li></ul>
-          <span class="path__link">Ver modelos estándar</span>
+          <span class="path__link">Ver quinchos estándar</span>
         </a>
         <a href="/mayorista" class="path path--olive">
           <small>Diseño a medida</small>
@@ -118,13 +122,15 @@
         <article class="info"><h3>Zonas de cobertura</h3><p>Trabajamos desde Santa Fe en distintas provincias. Consultanos tu localidad y te confirmamos si llegamos.</p></article>
         <article class="info"><h3>Contratación y garantía</h3><p>Consultás por WhatsApp y recibís tu presupuesto. En contado: 50 % al comenzar y 50 % al finalizar. 2 años de garantía por defectos de construcción e instalación.</p></article>
       </div>
+      <div class="faq-more"><a class="btn btn--wa" href="#" data-wa="Hola! Quiero asesoramiento para mi proyecto." data-loc="empresa">Quiero asesoramiento para mi proyecto</a></div>
     </div>
   </section>
 
-  <section class="section" id="calidad">
-    <div class="container split">
-      <div class="ph" data-reveal="left">FOTO · cubierta de paja</div>
-      <div data-reveal="right">
+  <!-- FOTO DE FONDO: reemplazar el div .bg-media por <img class="bg-media" src="/assets/img/calidad.jpg" alt="..."> -->
+  <section class="section section--dark section--photo roof" id="calidad">
+    <div class="bg-media ph" aria-hidden="true">FOTO DE FONDO · obra terminada</div>
+    <div class="container">
+      <div style="max-width:620px" data-reveal>
         <span class="eyebrow">Calidad constructiva</span>
         <h2>Construimos como si fuera para nosotros.</h2>
         <ul class="checks">
@@ -133,24 +139,24 @@
           <li><b>Resistencia climática:</b> protección frente a lluvias, sol y variaciones de temperatura.</li>
           <li><b>Aislación térmica natural:</b> más fresco en verano y menos pérdida de calor en invierno.</li>
         </ul>
-        <div class="hero__cta" style="margin-top:2rem"><a class="btn btn--ghost" href="/minorista#calidad" style="color:var(--color-dark)">Conocé cómo construimos</a></div>
+        <div class="hero__cta" style="margin-top:2rem"><a class="btn btn--ghost" href="/minorista#calidad">Conocé cómo construimos</a></div>
       </div>
     </div>
   </section>
 
-  <section class="section section--dark roof has-pattern has-pattern--soft">
+  <section class="section">
     <div class="container">
       <div class="section-head section-head--center" data-reveal>
         <span class="eyebrow">Tres líneas de construcción</span>
         <h2>Cada una pensada para diferentes necesidades.</h2>
       </div>
       <div class="lines" data-stagger>
-        <article class="line-card" style="color:var(--color-dark)">
+        <article class="line-card">
           <span class="tag">Económica</span><h3>Línea Tradicional</h3><span class="wood">Postes de palmera</span>
           <p>Estética rústica y natural con una menor inversión inicial. Su vida útil es más limitada.</p>
           <div class="life"><span>Vida útil de los postes</span><b>8 años</b></div>
         </article>
-        <article class="line-card" style="color:var(--color-dark)">
+        <article class="line-card">
           <span class="tag">Intermedia</span><h3>Línea Clásica</h3><span class="wood">Eucalipto curado e impregnado</span>
           <p>Excelente relación entre calidad, estética y costo, para quienes buscan una estructura más resistente.</p>
           <div class="life"><span>Vida útil de los postes</span><b>12–15 años</b></div>
@@ -161,8 +167,8 @@
           <div class="life"><span>Vida útil de los postes</span><b>+60 años</b></div>
         </article>
       </div>
-      <p class="fineprint" style="color:var(--color-bg)">* Los años corresponden a los <b>postes</b>, no al quincho completo. La cubierta de paja dura aproximadamente 10 años y puede renovarse conservando la estructura.</p>
-      <div class="faq-more"><a href="/minorista#lineas" class="btn btn--ghost">Compará nuestras líneas</a></div>
+      <p class="fineprint">* Los años corresponden a los <b>postes</b>, no al quincho completo. La cubierta de paja dura aproximadamente 10 años y puede renovarse conservando la estructura.</p>
+      <div class="faq-more"><a href="/minorista#lineas" class="btn btn--ghost" style="color:var(--color-dark)">Compará nuestras líneas</a></div>
     </div>
   </section>
 
@@ -176,6 +182,7 @@
         <div class="ph g1">OBRA</div><div class="ph g2">OBRA</div>
         <div class="ph g3">OBRA</div><div class="ph g4">OBRA</div><div class="ph g5">OBRA</div>
       </div>
+      <p class="swipe-hint">Deslizá para ver más →</p>
       <div class="faq-more"><a class="btn btn--wa" href="#" data-wa="Hola! Vi sus obras y quiero un quincho como los que construyen." data-loc="obras">Quiero un quincho como este</a></div>
     </div>
   </section>
@@ -186,17 +193,18 @@
         <span class="eyebrow">Preguntas frecuentes</span>
         <h2>Lo que todos nos preguntan.</h2>
       </div>
-      <div class="faq" data-faq="1,2,3,5,13,14"></div>
-      <div class="faq-more"><a class="btn btn--wa" href="#" data-wa="Hola! Quiero consultar por un quincho. ¿Me pueden asesorar?" data-loc="faq">¿Tenés otra consulta? Escribinos</a></div>
+      <div class="faq" data-faq="1,2,3,4,8,5"></div>
+      <div class="faq-more"><a class="btn btn--ghost" href="/minorista#faq">Ver todas las preguntas</a><a class="btn btn--wa" href="#" data-wa="Hola! Quiero consultar por un quincho. ¿Me pueden asesorar?" data-loc="faq">¿Tenés otra consulta? Escribinos</a></div>
     </div>
   </section>
   <section class="section section--dark cta has-pattern" id="contacto">
     <img class="watermark" src="/assets/img/isotipo-rombo.png" alt="">
     <div class="container">
       <span class="eyebrow">Hablemos</span>
-      <h2 data-reveal>¿Tenés un proyecto en mente?</h2>
-      <p class="lead" data-reveal data-delay=".1">Construimos espacios para disfrutar. Contactanos y recibí asesoramiento personalizado.</p>
-      <a class="btn btn--wa" data-reveal data-delay=".2" href="#" data-wa="Hola! Quiero consultar por un quincho. ¿Me pueden asesorar?" data-loc="cierre">Hablá con nuestros asesores</a>
+      <h2 data-reveal>Tres generaciones construyendo un mismo oficio.</h2>
+      <p class="lead" data-reveal data-delay=".1">Desde Santa Fe llevamos nuestro conocimiento y experiencia a distintos puntos del país. Construimos quinchos combinando tradición artesanal, calidad y compromiso en cada obra.</p>
+      <a class="btn btn--wa" data-reveal data-delay=".2" href="#" data-wa="Hola! Quiero consultar por un quincho. ¿Me pueden asesorar?" data-loc="cierre">Hablá con nuestro equipo</a>
+      <p class="cta__sub" data-reveal data-delay=".3">Desde Santa Fe · Consultá si llegamos a tu localidad</p>
     </div>
   </section>
 </main>
