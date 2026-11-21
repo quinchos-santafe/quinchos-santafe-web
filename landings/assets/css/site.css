@@ -351,7 +351,7 @@ body { overflow-x: clip; }
 /* Video de portada (opcional): se muestra solo si existe assets/video/portada.mp4 */
 .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0; transition: opacity 1.4s; }
 .hero__video.is-playing { opacity: .6; }
-.hero--video::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(35,33,33,.88), rgba(35,33,33,.35)); pointer-events: none; }
+.hero--video::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(30,28,28,.92) 0%, rgba(30,28,28,.72) 45%, rgba(30,28,28,.3) 100%), linear-gradient(0deg, rgba(30,28,28,.6), transparent 35%); pointer-events: none; }
 
 /* Sección con foto de fondo (se reemplaza .bg-media por una <img class="bg-media">) */
 .section--photo { position: relative; isolation: isolate; }
@@ -388,3 +388,9 @@ details.spec .compare { margin-top: 1rem; }
   .gallery .ph, .gallery .g1, .gallery .g2, .gallery .g3, .gallery .g4, .gallery .g5 { flex: 0 0 82%; scroll-snap-align: center; min-height: 300px; }
   .swipe-hint { display: block; }
 }
+
+/* Portada con video: el póster se ve de fondo mientras carga y en celular (donde el video no se descarga) */
+.hero--video { background: #232121 url("../video/hero-quinchos-santa-fe-poster.jpg") center / cover no-repeat; }
+.hero--video::before { opacity: .05; }
+.hero__video.is-playing { opacity: 1; }
+.hero--video .hero__art { opacity: .55; }

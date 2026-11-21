@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="preload" as="image" href="/assets/video/hero-quinchos-santa-fe-poster.jpg" fetchpriority="high">
 </head>
 <body data-landing="institucional">
 
@@ -32,10 +33,7 @@
 
 <main>
   <section class="hero hero--video">
-    <!-- VIDEO DE PORTADA (pendiente): subí el archivo a landings/assets/video/portada.mp4
-         (horizontal 1920x1080, sin audio, 10-15 s, menos de 8 MB) y quitá los comentarios de la línea de abajo:
-    <video class="hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="/assets/video/portada.mp4" type="video/mp4"></video>
-    -->
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="/assets/video/hero-quinchos-santa-fe-poster.jpg" aria-hidden="true"><source src="/assets/video/hero-quinchos-santa-fe-web.mp4" type="video/mp4"></video>
     <div class="hero__art" data-draw aria-hidden="true">
       <svg viewBox="0 0 760 440" fill="none" stroke="#B47F31" stroke-width="1.4">
         <path d="M6 400 L380 28 L754 400"/><path d="M70 400 L380 92 L690 400"/><path d="M134 400 L380 156 L626 400"/><path d="M198 400 L380 220 L562 400"/><path d="M262 400 L380 283 L498 400"/>

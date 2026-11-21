@@ -177,5 +177,10 @@ const heroVideo = document.querySelector(".hero__video");
 if (heroVideo) {
   const saveData = navigator.connection && navigator.connection.saveData;
   if (reduce || saveData || window.matchMedia("(max-width: 768px)").matches) heroVideo.remove();
-  else heroVideo.addEventListener("playing", () => heroVideo.classList.add("is-playing"));
+  else {
+    const show = () => heroVideo.classList.add("is-playing");
+    heroVideo.addEventListener("playing", show);
+    heroVideo.addEventListener("canplay", () => !heroVideo.paused && show());
+    if (!heroVideo.paused && heroVideo.readyState > 2) show();   // por si ya empezó antes de cargar este script
+  }
 }
