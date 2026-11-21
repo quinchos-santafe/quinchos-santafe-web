@@ -8,7 +8,7 @@ document.documentElement.classList.add("js");
 /* ---------- 1) WHATSAPP ----------
    Cambiá el número acá (código de país + área + número, sin + ni espacios).
    Cada botón con data-wa="mensaje" abre el chat con ese mensaje escrito. */
-const WHATSAPP = "549XXXXXXXXXX";
+const WHATSAPP = "5493426313000";
 document.querySelectorAll("[data-wa]").forEach((a) => {
   const msg = a.dataset.wa || "Hola! Quiero pedir un presupuesto.";
   a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
