@@ -176,3 +176,20 @@ if (heroVideo) {
     if (!heroVideo.paused && heroVideo.readyState > 2) show();   // por si ya empezó antes de cargar este script
   }
 }
+
+/* ---------- OBRAS: carrusel de fotos y videos de cada obra ---------- */
+document.querySelectorAll(".work__media").forEach((box) => {
+  const track = box.querySelector(".slides");
+  const slides = [...track.children];
+  const counter = box.querySelector(".work__count");
+  const update = () => {
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    if (counter) counter.textContent = `${i + 1} / ${slides.length}`;
+    slides.forEach((s, k) => { if (s.tagName === "VIDEO" && k !== i) s.pause(); });   // un video que sale de pantalla se pausa
+  };
+  track.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+  const go = (dir) => track.scrollBy({ left: dir * track.clientWidth, behavior: "smooth" });
+  box.querySelector(".slider-btn--prev")?.addEventListener("click", () => go(-1));
+  box.querySelector(".slider-btn--next")?.addEventListener("click", () => go(1));
+  update();
+});
