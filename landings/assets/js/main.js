@@ -185,6 +185,8 @@ document.querySelectorAll(".work__media").forEach((box) => {
   const update = () => {
     const i = Math.round(track.scrollLeft / track.clientWidth);
     if (counter) counter.textContent = `${i + 1} / ${slides.length}`;
+    const cap = box.querySelector(".work__cap");
+    if (cap && slides[i]) cap.textContent = slides[i].getAttribute("alt") || slides[i].getAttribute("aria-label") || "";
     slides.forEach((s, k) => { if (s.tagName === "VIDEO" && k !== i) s.pause(); });   // un video que sale de pantalla se pausa
   };
   track.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
