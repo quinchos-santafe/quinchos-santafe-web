@@ -445,3 +445,7 @@ details.spec .compare { margin-top: 1rem; }
 .path--photo::after { inset: 0; width: auto; aspect-ratio: auto; opacity: 1; transform: none; background: linear-gradient(0deg, rgba(25,23,23,.92) 0%, rgba(25,23,23,.62) 50%, rgba(25,23,23,.18) 100%); }
 .path--olive.path--photo::after { background: linear-gradient(0deg, rgba(40,43,18,.93) 0%, rgba(48,52,22,.62) 50%, rgba(48,52,22,.18) 100%); }
 .path--photo:hover::after { opacity: 1; transform: none; }
+
+/* En pantalla completa el video se ve entero (contain); "cover" solo se usa dentro de la tarjeta */
+.slides > video:fullscreen { object-fit: contain; background: #000; }
+.slides > video:-webkit-full-screen { object-fit: contain; background: #000; }
