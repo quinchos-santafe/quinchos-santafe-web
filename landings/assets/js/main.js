@@ -45,15 +45,7 @@ document.addEventListener("click", (e) => {
   });
 });
 
-/* Google Tag Manager: pegá acá el ID del contenedor (formato GTM-XXXXXXX).
-   Mientras tenga las X, no se carga nada. */
-const GTM_ID = "GTM-XXXXXXX";
-if (!/X{4,}/.test(GTM_ID)) {
-  window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
-  const s = document.createElement("script");
-  s.async = true; s.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
-  document.head.appendChild(s);
-}
+/* Google Tag Manager: el código está pegado en el <head> y el <body> de cada página (contenedor GTM-WJ6PQSWX). */
 
 /* ---------- 2) MENÚ MÓVIL ---------- */
 const toggle = document.querySelector(".nav-toggle");
