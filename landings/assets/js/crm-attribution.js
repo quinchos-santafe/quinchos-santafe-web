@@ -1,10 +1,12 @@
 /* ATRIBUCIÓN PARA EL CRM (clics en botones de WhatsApp)
    Qué hace:
    1) Guarda 30 días de dónde vino el visitante (gclid, utm_*, campaña, anuncio) en el navegador.
-   2) Cuando alguien toca un botón/link de WhatsApp, agrega un código "(ref: QSF-XXXXXXXXXX)" al mensaje
-      y le avisa al CRM (crm.quinchossantafe.com) con esa referencia y la atribución.
-   Así, cuando llega el mensaje por WhatsApp, el CRM sabe de qué anuncio y qué landing salió.
+   2) Cuando alguien toca un botón/link de WhatsApp, agrega al mensaje un renglón
+      "Código de consulta: K7P2X9" y le avisa al CRM (crm.quinchossantafe.com) con ese código, la
+      atribución y el texto del botón. Si la persona borra el código, el CRM igual lo une por
+      horario + texto del botón.
    No toca los links que no son de WhatsApp.
+   Generado desde el CRM (Configuración → Landing). Para cambiarlo, regenerarlo desde ahí.
    Va cargado ANTES de main.js en las 3 landings. */
 (function () {
   var ENDPOINT = "https://crm.quinchossantafe.com/api/leads/click";
@@ -50,13 +52,14 @@
     try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), d: current })); } catch (e) {}
   }
 
-  function newRef() {
-    var chars = "0123456789ABCDEF", out = "QSF-";
+  // Código corto, sin letras que se confunden (mismo alfabeto que ref-patterns.ts).
+  function newCode() {
+    var chars = "23456789ABCDEFGHJKMNPQRSTUVWXYZ", out = "";
     var bytes = window.crypto && window.crypto.getRandomValues
-      ? window.crypto.getRandomValues(new Uint8Array(10))
+      ? window.crypto.getRandomValues(new Uint8Array(6))
       : null;
-    for (var i = 0; i < 10; i++) {
-      out += chars.charAt((bytes ? bytes[i] : Math.floor(Math.random() * 256)) % 16);
+    for (var i = 0; i < 6; i++) {
+      out += chars.charAt((bytes ? bytes[i] : Math.floor(Math.random() * 256)) % chars.length);
     }
     return out;
   }
@@ -76,14 +79,17 @@
     if (!isWhatsAppLink(url)) return href;
 
     var text = url.searchParams.get("text") || "Hola! Quiero un presupuesto.";
-    if (text.indexOf("(ref: QSF-") !== -1) return href;
+    // Ya tiene código (formato nuevo o el viejo "(ref: QSF-…)"): no se agrega otro.
+    if (/c[o\u00f3]digo de consulta/i.test(text) || text.indexOf("(ref: QSF-") !== -1) return href;
 
-    var ref = newRef();
-    var sep = text.indexOf("\n") !== -1 ? "\n\n" : " ";
-    url.searchParams.set("text", text + sep + "(ref: " + ref + ")");
+    var code = newCode();
+    url.searchParams.set("text", text + "\n\nC\u00f3digo de consulta: " + code);
 
     var attr = fromUrl() || load() || {};
-    attr.clickRef = ref;
+    attr.clickRef = "QSF-" + code;
+    // El texto del botón SIN el código: si la persona borra el código, el CRM igual puede unir
+    // el mensaje con este clic por horario + texto (ver findWebsiteClickByTiming).
+    attr.prefill = text;
     attr.landing = window.location.href;
     attr.intakeToken = TOKEN;
     try {
